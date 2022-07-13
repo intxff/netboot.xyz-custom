@@ -3,7 +3,6 @@
 :custom
 clear custom_choice
 menu MyNetboot
-item --gap This is the first sub menu
 item option_one ${space} Nixos
 choose custom_choice || goto custom_exit
 
