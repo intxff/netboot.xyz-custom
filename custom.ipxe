@@ -1,12 +1,19 @@
 #!ipxe
-###
-### netboot.xyz-custom menu
-###
 
-:start
-echo Hello world!
-sleep 10
+:custom
+clear custom_choice
+menu MyNetboot
+item --gap This is the first sub menu
+item option_one ${space} Nixos
+choose custom_choice || goto custom_exit
+
+goto ${custom_choice}
 goto custom_exit
 
+:option_one
+imgfree
+chain https://github.com/nix-community/nixos-images/releases/download/${version}/netboot-x86_64-linux.ipxe
+
 :custom_exit
-exit 0
+clear menu
+exit
