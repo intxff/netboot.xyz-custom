@@ -1,6 +1,6 @@
 #!ipxe
 # Use the cmdline variable to allow the user to specify custom kernel params
 # when chainloading this script from other iPXE scripts like netboot.xyz
-kernel http://207.148.110.103/bzImage-x86_64-linux init=/nix/store/iadkpa23arbv1xs92ddmpz2b82lb34nh-nixos-system-nixos-22.05beta-248980.gfedcba/init initrd=initrd-x86_64-linux loglevel=4 ${cmdline}
-initrd http://207.148.110.103/initrd-x86_64-linux
+kernel http://173.242.117.195:30000/bzImage-x86_64-linux init=/nix/store/iadkpa23arbv1xs92ddmpz2b82lb34nh-nixos-system-nixos-22.05beta-248980.gfedcba/init initrd=initrd-x86_64-linux loglevel=4 ${cmdline}
+initrd http://173.242.117.195:30000/initrd-x86_64-linux
 boot
